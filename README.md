@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="header-banner.jpg" alt="Cinema AI Toolkit" width="100%"/>
+</p>
+
 # Cinema AI Toolkit
 
 **Documentary filmmaker's AI toolkit — voice repair, VHS analysis, FCP workflows, OCR for handwritten documents.**
