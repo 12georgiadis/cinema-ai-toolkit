@@ -1,0 +1,25 @@
+# Core audio processing
+openai-whisper>=20231117     # transcription
+ffmpeg-python>=0.2.0
+
+# Voice conversion (V2V) — pick one or several
+seed-vc                      # zero-shot V2V, recommended (no training)
+# rvc-python                 # RVC: pip install rvc-python (needs GPU for training)
+# openvoice                  # OpenVoice v2: tone color separation
+
+# TTS + zero-shot cloning — pick one
+# chatterbox-tts             # Chatterbox: MIT, beats ElevenLabs blind tests
+# f5-tts                     # F5-TTS: MIT, fast, reliable
+# cosyvoice                  # CosyVoice 3: instruction-based style
+# elevenlabs>=1.0            # ElevenLabs cloud API
+
+# Audio preprocessing
+soundfile>=0.12.0
+librosa>=0.10.0
+numpy>=1.24.0
+
+# Optional: noise reduction
+# deepfilternet              # pip install deepfilternet
+
+# Optional: diarization + timestamps
+# whisperx                   # pip install whisperx

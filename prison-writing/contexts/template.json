@@ -1,0 +1,15 @@
+{
+  "project": "Nom du projet",
+  "subject": "Nom du sujet",
+  "subject_description": "Description du sujet documentaire pour contextualiser les analyses Gemini.",
+  "doc_types": [
+    "lettre_manuscrite",
+    "document_officiel",
+    "note_personnelle",
+    "rapport",
+    "formulaire",
+    "enveloppe",
+    "autre"
+  ],
+  "prompt_context": "Contexte supplémentaire à injecter dans le prompt (facultatif)."
+}
