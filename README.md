@@ -4,7 +4,7 @@
 
 # Cinema AI Toolkit
 
-**Documentary filmmaker's AI toolkit — voice repair, VHS analysis, FCP workflows, OCR for handwritten documents.**
+**Documentary filmmaker's AI toolkit — voice repair, VHS analysis, FCP workflows, OCR, FCPXML generation, narrative visualization.**
 
 Built for real productions, not demos.
 
@@ -25,15 +25,17 @@ These tools were built during active production of feature documentaries. They s
 
 ## What's inside
 
-Four independent tools, one repo. Each has its own README with full documentation.
+Six independent tools, one repo. Each has its own README with full documentation.
 
 ```
 cinema-ai-toolkit/
-├── voice-pipeline/    # Voice repair for documentary subjects
-├── vhs-pipeline/      # VHS/Hi8/miniDV analysis with Gemini → FCP markers
-├── fcp-workflow/       # Final Cut Pro auteur workflow + Claude Code integration
-├── prison-writing/    # OCR + graphological analysis for handwritten documents
-└── ETHICS.md          # Ethics statement for documentary AI tools
+├── voice-pipeline/       # Voice repair for documentary subjects
+├── vhs-pipeline/         # VHS/Hi8/miniDV analysis with Gemini → FCP markers
+├── fcp-workflow/          # Final Cut Pro auteur workflow + Claude Code integration
+├── prison-writing/       # OCR + graphological analysis for handwritten documents
+├── fcpxml-generator/     # Generate FCPXML 1.11 timelines from JSON structure
+├── d3-documentary-visu/  # D3.js relationship maps + emotion curves
+└── ETHICS.md             # Ethics statement for documentary AI tools
 ```
 
 ---
@@ -97,6 +99,31 @@ For each image:
 | Gemini 3 Flash | ~90% | $0.50/1M tokens |
 | GPT-5 | ~90%+ | $$$ |
 | Tesseract (local) | ~64% | Free |
+
+---
+
+### [FCPXML Generator](fcpxml-generator/)
+
+Generate valid FCPXML 1.11 timelines from structured JSON. Push your narrative architecture (acts, sequences, markers) directly into Final Cut Pro without manual rebuilding.
+
+```
+JSON structure → Python CLI → FCPXML 1.11 → FCP 12
+```
+
+**Stack:** Python 3.10+, stdlib only (no dependencies)
+
+---
+
+### [D3.js Documentary Visualizations](d3-documentary-visu/)
+
+Self-contained HTML visualizations for documentary development. Two types:
+
+- **Relationship Map** — Force-directed graph (Lombardi-style) of character interconnections
+- **Emotion Curve** — Multi-layer temporal visualization of narrative arcs
+
+Both output standalone HTML files. Dark theme, interactive, no server needed.
+
+**Stack:** D3.js v7, vanilla HTML/CSS/JS
 
 ---
 
